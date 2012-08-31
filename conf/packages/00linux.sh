@@ -46,7 +46,7 @@ configure-linux-headers() {
 }
 
 compile-linux-headers() {
-	compile $MAKE CFLAGS="$TARGET_CFLAGS" ARCH=$TARGET_KERNEL_ARCH O="$BUILD/linux-obj" \
+	compile 1 $MAKE CFLAGS="$TARGET_CFLAGS" ARCH=$TARGET_KERNEL_ARCH O="$BUILD/linux-obj" \
 		CROSS_COMPILE="${CROSS}-" \
 			oldconfig			
 }

@@ -115,6 +115,12 @@ configure() {
 	fi
 }
 
+# Pass "1" as first parameter if you want to print to stdout and logfile
+# bit hacky...
+#
+# needed ex. when compiling linux-headers and compiler 
+# asks about drivers to build. it's nicer to see the questions than 
+# keep doing "cat <logfile>" after every y/n
 compile() {
 	local turd="._compile_$PACKAGE"
 	LOGFILE="$turd.log"
@@ -122,12 +128,23 @@ compile() {
 		echo "     Compiling $PACKAGE"
 		rm -f $turd
 		echo "$@" >$LOGFILE
-		if "$@" >>$LOGFILE 2>&1 ; then
-			touch $turd
+		if [ "$1" = 1 ]; then
+			shift;
+			if "$@" 2>&1 | tee -a $LOGFILE ; then
+				touch $turd
+			else
+				echo "#### ** ERROR ** Compiling $PACKAGE"
+				echo "     Check $(pwd)/$LOGFILE"
+				exit 1
+			fi
 		else
-			echo "#### ** ERROR ** Compiling $PACKAGE"
-			echo "     Check $(pwd)/$LOGFILE"
-			exit 1
+			if "$@" >>$LOGFILE 2>&1 ; then
+				touch $turd
+			else
+				echo "#### ** ERROR ** Compiling $PACKAGE"
+				echo "     Check $(pwd)/$LOGFILE"
+				exit 1
+			fi
 		fi
 	fi
 }

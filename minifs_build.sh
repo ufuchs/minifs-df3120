@@ -20,7 +20,7 @@
 set +o posix #needed for dashes in function names
 set -m # enable job control
 
-MINIFS_BOARD=${MINIFS_BOARD:-"atom"}
+MINIFS_BOARD=${MINIFS_BOARD:-"df3120"}
 
 # get a default number of concurent jobs
 MINIFS_JOBS=${MINIFS_JOBS:-$(cat /proc/cpuinfo |grep '^processor'|wc -l)}
