@@ -3,3 +3,4 @@ build-*
 toolchain
 ._*
 .DS_Store
+*~
