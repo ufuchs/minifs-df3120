@@ -1,13 +1,14 @@
 
 
 PACKAGES+=" dbus"
-hset dbus url "http://dbus.freedesktop.org/releases/dbus/dbus-1.4.0.tar.gz"
+hset dbus url "http://dbus.freedesktop.org/releases/dbus/dbus-1.6.4.tar.gz"
 hset dbus depends "libexpat"
 
 configure-dbus() {
 	configure-generic \
 		--without-x \
 		--enable-xml-docs=no \
+		--with-system-socket=/usr/var/run/dbus/system_bus_socket \
 		--enable-doxygen-docs=no
 }
 
@@ -16,7 +17,7 @@ deploy-dbus() {
 }
 
 PACKAGES+=" bluez"
-hset bluez url "http://www.kernel.org/pub/linux/bluetooth/bluez-4.81.tar.gz"
+hset bluez url "http://www.kernel.org/pub/linux/bluetooth/bluez-4.101.tar.gz"
 hset bluez depends "dbus libiconv libgettext libglib"
 
 configure-bluez() {
@@ -26,7 +27,7 @@ configure-bluez() {
 		--disable-bccmd \
 		--enable-configfiles \
 		--disable-cups  \
-		--disable-debug \
+		--enable-debug \
 		--disable-dfutool \
 		--enable-dund   \
 		--disable-fortify \

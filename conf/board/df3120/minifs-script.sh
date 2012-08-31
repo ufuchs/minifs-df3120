@@ -16,13 +16,13 @@ board_set_versions() {
 
 board_prepare() {
 	TARGET_PACKAGES+=" strace gdbserver libvncserver picocom uboot"
-	TARGET_PACKAGES+=" bluez cwiid libsdl"
+	TARGET_PACKAGES+=" bluez dbus cwiid libsdl"
 	TARGET_PACKAGES+=" sdlplasma sdlvoxel"
-	TARGET_PACKAGES+=" kobodeluxe"
-	TARGET_PACKAGES+=" sdldoom"
 	TARGET_PACKAGES+=" fbvncslave"
+	TARGET_PACKAGES+=" libncurses"
 	TARGET_PACKAGES+=" plftool"
-	hset dbus deploy false
+	TARGET_PACKAGES+=" blueztools"
+	#hset dbus deploy false
 }
 
 df3120-deploy-linux-bare() {
