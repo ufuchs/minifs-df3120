@@ -8,6 +8,7 @@ configure-dbus() {
 	configure-generic \
 		--without-x \
 		--enable-xml-docs=no \
+		--with-dbus-user=root \
 		--with-system-socket=/usr/var/run/dbus/system_bus_socket \
 		--enable-doxygen-docs=no
 }
@@ -25,26 +26,24 @@ configure-bluez() {
 		--disable-alsa \
 		--disable-audio \
 		--disable-bccmd \
-		--enable-configfiles \
 		--disable-cups  \
-		--enable-debug \
 		--disable-dfutool \
-		--enable-dund   \
 		--disable-fortify \
 		--disable-gstreamer \
 		--disable-hid2hci \
-		--enable-hidd \
-		--enable-input \
-		--disable-netlink \
-		--enable-network \
-		--enable-pand \
 		--disable-pcmcia \
 		--disable-pie \
+		--disable-usb \
+		--enable-datafiles \
+		--enable-debug \
+		--enable-dund \
+		--enable-hidd \
+		--enable-input \
+		--enable-network \
+		--enable-pand \
 		--enable-serial \
 		--enable-service \
-		--enable-tools \
-		--disable-udevrules \
-		--disable-usb
+		--enable-tools
 }
 
 deploy-bluez() {
