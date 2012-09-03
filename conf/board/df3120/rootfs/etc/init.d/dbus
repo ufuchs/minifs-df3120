@@ -1,14 +1,14 @@
 #!/bin/hush
 start() {
-	    echo "* Starting dbus"
-        mkdir -p /usr/var/run/dbus
-        /bin/rm -f /usr/var/run/dbus/pid
-        dbus-daemon --system
+	echo "* Starting dbus";
+	mkdir -p /usr/var/run/dbus;
+	/bin/rm -f /usr/var/run/dbus/pid;
+	dbus-daemon --system;
 }
 stop() {
-	    echo "* Stopping dbus"
-        /bin/rm -f /usr/var/run/dbus/pid
-        killall dbus-daemon
+	echo "* Stopping dbus";
+	/bin/rm -f /usr/var/run/dbus/pid;
+	killall dbus-daemon;
 }
 
 case "$1" in
