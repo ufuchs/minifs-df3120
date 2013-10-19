@@ -1,7 +1,10 @@
 minifs-df3120-for-weather
 =========================
 
-*minifs-df3120-for-weather* is forked from the https://github.com/tuopppi/minifs-df3120 repository by Tuomas 'tuopppi' Vaherkoski. 
+*minifs-df3120-for-weather* is forked from the #
+https://github.com/tuopppi/minifs-df3120 
+repository by 
+Tuomas 'tuopppi' Vaherkoski.
 This fork supports one and only the *Parrot DF3120 320x240 Bluetooth/SD/USB Picture Frame* and includes all the necessary patches from https://github.com/ufuchs/parrot-df3120_post-hoc.
 Needing a clean installation, this repository was the first choice. Many thanks again, Toumas!
 
