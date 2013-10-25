@@ -257,6 +257,7 @@ unset PACKAGE
 pushd download >/dev/null
 for package in $TARGET_PACKAGES; do 
 	fil=$(hget $package url)
+	gb=$(hget $package git_branch)
 
 	if [ "$fil" = "" ]; then continue ; fi
 
@@ -284,8 +285,8 @@ for package in $TARGET_PACKAGES; do
 	if [ ! -f "$loc" ]; then
 		case "$proto" in
 			git)	if [ ! -d "$package.git" ]; then
-					echo "#### git clone $url $package.git"
-					git clone "$url" "$package.git"
+					echo "#### git clone $gb $url $package.git"
+					git clone "$gb" "$url" "$package.git"
 				fi
 				if [ -d "$package.git" ]; then
 					echo "#### Compressing $url"

@@ -10,12 +10,23 @@ configure-dbus() {
 		--enable-xml-docs=no \
 		--with-dbus-user=root \
 		--with-system-socket=/usr/var/run/dbus/system_bus_socket \
+		--enable-shared \
 		--enable-doxygen-docs=no
 }
 
 deploy-dbus() {
 	deploy deploy_binaries
 }
+
+
+PACKAGES+=" hcidump"
+hset hcidump url "https://www.kernel.org/pub/linux/bluetooth/bluez-hcidump-2.5.tar.gz"
+hset hcidump depends "bluez"
+
+deploy-hcidump() {
+	deploy deploy_binaries
+}
+
 
 PACKAGES+=" bluez"
 hset bluez url "http://www.kernel.org/pub/linux/bluetooth/bluez-4.101.tar.gz"
@@ -33,7 +44,9 @@ configure-bluez() {
 		--disable-hid2hci \
 		--disable-pcmcia \
 		--disable-pie \
+		--disable-udev \
 		--disable-usb \
+		--enable-configfiles \
 		--enable-datafiles \
 		--enable-debug \
 		--enable-dund \
@@ -43,10 +56,19 @@ configure-bluez() {
 		--enable-pand \
 		--enable-serial \
 		--enable-service \
-		--enable-tools
+		--enable-tools \
+		--enable-test
 }
 
 deploy-bluez() {
+	deploy deploy_binaries
+}
+
+PACKAGES+=" hcidump"
+hset hcidump url "https://www.kernel.org/pub/linux/bluetooth/bluez-hcidump-2.5.tar.gz"
+hset hcidump depends "bluez"
+
+deploy-hcidump() {
 	deploy deploy_binaries
 }
 
@@ -66,21 +88,5 @@ configure-btscanner() {
 
 deploy-btscanner() {
 	deploy deploy_binaries
-}
-
-
-PACKAGES+=" cwiid"
-hset cwiid url "http://abstrakraft.org/cwiid/downloads/cwiid-0.6.00.tgz"
-
-configure-cwiid() {
-	#export LDFLAGS='-lbluetooth -lrt -lpthread'
-	autoreconf
-	configure-generic \
-		--without-python --disable-ldconfig
-}
-
-deploy-cwiid() {
-	deploy deploy_binaries
-#	deploy_staging_path "/etc/cwiid"
 }
 

@@ -15,13 +15,12 @@ board_set_versions() {
 }
 
 board_prepare() {
-	TARGET_PACKAGES+=" strace picocom uboot"
-	TARGET_PACKAGES+=" bluez dbus libsdl libsdlimage libsdlttf"
-	TARGET_PACKAGES+=" sdlweather"
-	TARGET_PACKAGES+=" libncurses"
+	TARGET_PACKAGES+=" strace gdbserver picocom uboot"
+	TARGET_PACKAGES+=" bluez libsdl libsdlimage libsdlttf"
 	TARGET_PACKAGES+=" plftool"
+	TARGET_PACKAGES+=" sdlweather"
 	TARGET_PACKAGES+=" blueztools"
-	#hset dbus deploy false
+#	hset dbus deploy false
 }
 
 df3120-deploy-linux-bare() {
