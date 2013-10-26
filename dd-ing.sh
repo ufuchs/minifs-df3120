@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# invoke it with :
+# 'sudo ./dd-ing.sh'
+
 SD_CARD=/dev/sdc1
 
 umount $SD_CARD
