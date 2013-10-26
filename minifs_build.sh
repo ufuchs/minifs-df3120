@@ -286,7 +286,7 @@ for package in $TARGET_PACKAGES; do
 		case "$proto" in
 			git)	if [ ! -d "$package.git" ]; then
 					echo "#### git clone $gb $url $package.git"
-					git clone "$gb" "$url" "$package.git"
+					git clone $gb "$url" "$package.git"
 				fi
 				if [ -d "$package.git" ]; then
 					echo "#### Compressing $url"
