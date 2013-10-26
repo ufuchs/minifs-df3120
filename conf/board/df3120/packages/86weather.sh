@@ -1,6 +1,6 @@
 
 PACKAGES+=" sdlweather"
-hset sdlweather url "git!git://github.com/ufuchs/weather-on-df3120#sdlweather.bz2" 
+hset sdlweather url "git!git://github.com/ufuchs/weather-on-df3120.git#sdlweather.bz2" 
 hset sdlweather depends "libsdl libsdlimage libsdlttf"
 
 install-sdlweather() {
