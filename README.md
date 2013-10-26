@@ -1,5 +1,4 @@
-minifs-df3120 / still in process
-================================
+**minifs-df3120** 
 
 *minifs-df3120* is forked from the [minifs-df3120](https://github.com/tuopppi/minifs-df3120) repository by [Tuomas 'tuopppi' Vaherkoski](https://github.com/tuopppi).
 
