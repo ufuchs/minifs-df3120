@@ -17,5 +17,7 @@ echo '  '\"$PRODUCT\"
 echo '==============================================================================='
 echo
 
+rm -rf ./download/sdlweather.bz2
+
 ./minifs_build.sh $1
 
