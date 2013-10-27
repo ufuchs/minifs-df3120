@@ -3,7 +3,7 @@ minifs-df3120
 
 *minifs-df3120* is forked from the [minifs-df3120](https://github.com/tuopppi/minifs-df3120) repository by [Tuomas 'tuopppi' Vaherkoski](https://github.com/tuopppi).
 
-Needing a clean installation, this repository was the first choice. Many thanks again, Toumas!
+Needing a clean installation, his repository was the first choice. Many thanks again, Toumas!
 
 This fork supports one and only the [*Parrot DF3120 320x240 Bluetooth/SD/USB Picture Frame*](https://sites.google.com/site/repurposelinux/df3120) and includes all the necessary patches from [parrot-df3120_post-hoc](https://github.com/ufuchs/parrot-df3120_post-hoc).
 
