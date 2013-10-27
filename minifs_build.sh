@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # prerequisites : 
-# libtool, bison, flex, genext2fs, squashfs, svn -- probably more
+# libtool, bison, flex, genext2fs, squashfs, svn, lzop -- probably more
 # u-boot-mkimage -- for the arm targets
 
 #######################################################################
