@@ -20,28 +20,32 @@ URL="http://$WEATHER_SERVER/$WEATHER_OBSERVER_LOCATION"
 WEATHER_DIR="/tmp"
 WEATHER_FNAME_BASE="weather"
 
+#   ---------------------------------------------
+#   prints execution status.
 #
-#
-#
+#   @param {$1} Integer : Execution status,
+#                         0 for [OK] or 1 for [ko]
+#   @param {$2} Integer : Optional, continue (0)
+#                         or abort (1) on error
+#   ---------------------------------------------
 status () {
 
-
-    echo -ne '\033[36G'
+    echo -ne '\033[36G'                # starts writing on position 36
 
     [ $1 -eq 0 ] && {
-            echo -ne '\033[0;32m'
+            echo -ne '\033[0;32m'      # sets text color back to green
             echo '[OK]'
         } || {
-            echo -ne '\033[0;31m'
-            echo -ne '\033[36G''[ko]'
-            echo
+            echo -ne '\033[0;31m'      # sets text color back to red
+            echo '[ko]'
             sleep 10
            [ ${2:0} -eq 1 ] && {
                echo "[ ABORT ]"
                exit 1
            }
         }
-    echo -ne '\033[0;37m'
+
+    echo -ne '\033[0;37m'              # sets text color back to white
 }
 
 #
