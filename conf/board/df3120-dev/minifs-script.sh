@@ -15,11 +15,9 @@ board_set_versions() {
 }
 
 board_prepare() {
-	TARGET_PACKAGES+=" strace gdbserver picocom uboot"
-	TARGET_PACKAGES+=" bluez libsdl libsdlimage libsdlttf"
-	TARGET_PACKAGES+=" plftool"
+	TARGET_PACKAGES+=" strace uboot"
+	TARGET_PACKAGES+=" libsdl libsdlimage libsdlttf"
 	TARGET_PACKAGES+=" sdlweather"
-	TARGET_PACKAGES+=" blueztools"
 #	hset dbus deploy false
 }
 
