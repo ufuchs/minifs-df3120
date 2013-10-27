@@ -22,6 +22,8 @@ set -m # enable job control
 
 MINIFS_BOARD=${MINIFS_BOARD:-"df3120"}
 
+PRODUCT=${PRODUCT:-${MINIFS_BOARD}}
+
 # get a default number of concurent jobs
 MINIFS_JOBS=${MINIFS_JOBS:-$(cat /proc/cpuinfo |grep '^processor'|wc -l)}
 
@@ -51,7 +53,7 @@ export MINIFS_BASE="$BASE"
 
 NEEDED_HOST_COMMANDS="make tar rsync installwatch wget git"
 
-export BUILD="$BASE/build-${MINIFS_BOARD}"
+export BUILD="$BASE/build-${PRODUCT}"
 CONF_BASE="$BASE/conf"
 PATCHES="$CONF_BASE"/patches
 
@@ -62,7 +64,7 @@ export ROOTFS_PLUGINS=""
 export ROOTFS_KEEPERS="libnss_dns.so.2:libnss_dns-2.10.2.so:"
 export STAGING_TOOLS="$BUILD"/staging-tools
 KERNEL="$BUILD/kernel"
-CONFIG="$CONF_BASE/board/$MINIFS_BOARD"
+CONFIG="$CONF_BASE/board/$PRODUCT"
  
 source "$CONF_BASE"/minifs-script-utils.sh
 source "$CONFIG"/minifs-script.sh
