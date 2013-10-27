@@ -12,7 +12,8 @@ export PRODUCT=df3120-dev
 
 echo
 echo '==============================================================================='
-echo 'Your product is' \"$PRODUCT\"
+echo 'Your product calls' 
+echo '  '\"$PRODUCT\"
 echo '==============================================================================='
 echo
 
