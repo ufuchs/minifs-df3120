@@ -27,7 +27,7 @@ This is reflected in /conf/board/
 - *df3120*, the release/final product
 - *df3120-dev*, the development stage
 
-The _motive_ behind the motive is a planed refactoring of 'weather-on-df3120' using [mbeddr](http://mbeddr.wordpress.com/)
+(The _motive_ behind the motive is a planed refactoring of 'weather-on-df3120' using [mbeddr](http://mbeddr.wordpress.com/).)
 
 And here the result of all efforts.
 
