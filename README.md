@@ -3,7 +3,8 @@ minifs-df3120
 
 *minifs-df3120* is forked from the [minifs-df3120](https://github.com/tuopppi/minifs-df3120) repository by [Tuomas 'tuopppi' Vaherkoski](https://github.com/tuopppi).
 
-Needing a clean installation, his repository was the first choice. Many thanks again, Toumas!
+Needing a clean installation, his repository was the first choice.  
+Many thanks again, Toumas!
 
 This fork supports one and only the [*Parrot DF3120 320x240 Bluetooth/SD/USB Picture Frame*](https://sites.google.com/site/repurposelinux/df3120) and includes all the necessary patches from [parrot-df3120_post-hoc](https://github.com/ufuchs/parrot-df3120_post-hoc).
 
@@ -14,8 +15,8 @@ During the development process, there is a need of
 - a serial console support 
 on the DF3120.
 
-The final product doesn't need such support/features!
-On the other hand it is possible to develop the weather application on the host system.
+The final product doesn't need such support/features!  
+On the other hand it is possible to develop the weather application on the host system.  
 So I have had constantly to switch between build configurations, copy files from the workspace to mini-fs and so on.
 
 Therefore I have decided to introduce some kind of product line variability
