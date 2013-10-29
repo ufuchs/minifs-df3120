@@ -27,6 +27,8 @@ This is reflected in /conf/board/
 - *df3120*, the release/final product
 - *df3120-dev*, the development stage
 
+The _motive_ behind the motive is a planed refactoring of 'weather-on-df3120' using [mbeddr](http://mbeddr.wordpress.com/)
+
 And here the result of all efforts.
 
 ![df3120-startup1280](https://f.cloud.github.com/assets/614954/1368748/5e19df06-39bb-11e3-8a51-7e64cbd45906.jpg)
