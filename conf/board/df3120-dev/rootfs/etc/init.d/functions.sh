@@ -175,7 +175,7 @@ start_apps () {
 startUsbNetworkServices () {
     start_ntpd
     start_telnetd
-#   start_crond
+    start_crond
 #   mountNFS
 }
 
