@@ -14,7 +14,7 @@ During the development process, there is a need of
 - a serial console support 
 on the DF3120.
 
-The final product doesn't need such support/features!
+The final product doesn't need such support/features!  
 On the other hand it is possible to develop the weather application on the host system.
 So I have had constantly to switch between build configurations, copy files from the workspace to mini-fs and so on.
 
