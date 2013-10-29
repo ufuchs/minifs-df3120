@@ -8,12 +8,12 @@ export MINIFS_BOARD=df3120
 #+ and rename it to 'df3120-dev'.
 #  Then I've made the adjustments, e.g. kernel config etc.
 
-export PRODUCT=$(cat PRODUCT)   #  So adjust the one-line content of the 
-                                #+ PRODUCT file to your needs.
+export PRODUCT=$(cat CURRENT_PRODUCT_LINE)  #  So adjust the one-line content of the 
+                                            #+ PRODUCT file to your needs.
 
 echo
 echo '==============================================================================='
-echo 'Your product calls' 
+echo 'Your current product calls' 
 echo '  '\"$PRODUCT\"
 echo '==============================================================================='
 echo

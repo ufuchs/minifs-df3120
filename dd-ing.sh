@@ -7,11 +7,11 @@ SD_CARD=/dev/sdc1
 
 umount $SD_CARD
 
-PRODUCT=$(cat PRODUCT)
+PRODUCT=$(cat CURRENT_PRODUCT_LINE)
 
 echo
 echo '==============================================================================='
-echo 'Your product calls' 
+echo 'Your current product calls' 
 echo '  '\"$PRODUCT\"
 echo '==============================================================================='
 echo
